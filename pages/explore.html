@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/src/assets/images/logo2.gif" />
+    <link href="/src/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="/src/js/tailwind3.3.3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Nobnocket</title>
+</head>
+
+<body class="max-w-7xl ml-auto mr-auto">
+    <!-- Logo Field -->
+    <div class="md:flex justify-between max-w-3xl ml-auto mr-auto my-3 hidden">
+        <div class="uppercase text-prime flex justify-center items-center ">MARTHA'S VINEYARD, MA</div>
+        <div><a href="/"><img src="/src/assets/images/logo.png" alt="" class="w-64 "></a></div>
+        <div class="uppercase text-prime md:flex justify-center items-center hidden">(508) 696-0859
+            <span class="ml-1">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 448 512">
+                    <path fill="#273B76"
+                        d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" />
+                </svg>
+            </span>
+            <span class="ml-1">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 448 512">
+                    <path fill="#273B76"
+                        d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z" />
+                </svg>
+            </span>
+            <span class="ml-1">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 448 512">
+                    <path fill="#273B76"
+                        d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM351.3 199.3v0c0 86.7-66 186.6-186.6 186.6c-37.2 0-71.7-10.8-100.7-29.4c5.3 .6 10.4 .8 15.8 .8c30.7 0 58.9-10.4 81.4-28c-28.8-.6-53-19.5-61.3-45.5c10.1 1.5 19.2 1.5 29.6-1.2c-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3c-9-6-16.4-14.1-21.5-23.6s-7.8-20.2-7.7-31c0-12.2 3.2-23.4 8.9-33.1c32.3 39.8 80.8 65.8 135.2 68.6c-9.3-44.5 24-80.6 64-80.6c18.9 0 35.9 7.9 47.9 20.7c14.8-2.8 29-8.3 41.6-15.8c-4.9 15.2-15.2 28-28.8 36.1c13.2-1.4 26-5.1 37.8-10.2c-8.9 13.1-20.1 24.7-32.9 34c.2 2.8 .2 5.7 .2 8.5z" />
+                </svg>
+            </span>
+        </div>
+    </div>
+    <div class="md:hidden flex justify-center items-center"><img src="/src/assets/images/logo.png" alt="" class="w-64 ">
+    </div>
+    <div
+        class="md:hidden flex justify-center items-cente bg-prime max-w-xs ml-auto mr-auto my-5 py-3 text-center text-white font-bold">
+        (508) 696-0859</div>
+
+    <!-- Navigation -->
+    <div class="max-w-4xl ml-auto mr-auto uppercase text-prime my-3">
+        <ul class="md:flex justify-between lg:text-xl text-md px-5 hidden">
+            <li><a href="/pages/rooms.html">ROOMS</a></li>
+            <li><a href="/pages/experience.html">EXPERIENCE</a></li>
+            <li><a href="/pages/vineyard.html">THE VINEYARD</a></li>
+            <li><a href="/pages/photos.html">PHOTOS</a></li>
+            <li><a href="/pages/availability.html">CHECK AVAILABILITY</a></li>
+            <li id="more_btn_l">
+                <div class="flex justify-between items-center cursor-pointer">More<span class="ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            <path fill="#273B76"
+                                d="M64 144a48 48 0 1 0 0-96 48 48 0 1 0 0 96zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM64 464a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm48-208a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z" />
+                        </svg>
+                    </span>
+                </div>
+            </li>
+        </ul>
+        <div id="more_btn_s">
+            <div class="flex md:hidden justify-around items-center text-xl max-w-[100px] ml-auto mr-auto">Menu<span
+                    class="ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                        <path fill="#273B76"
+                            d="M64 144a48 48 0 1 0 0-96 48 48 0 1 0 0 96zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM64 464a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm48-208a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z" />
+                    </svg>
+                </span> </div>
+        </div>
+        <div class="w-full flex justify-center items-center flex-col text-xl" id="drop">
+            <div class="md:hidden block py-2"><a href="/pages/rooms.html">ROOMS</a></div>
+            <div class="md:hidden block py-2"><a href="/pages/experience.html">EXPERIENCE</a></div>
+            <div class="md:hidden block py-2"><a href="/pages/vineyard.html">THE VINEYARD</a></div>
+            <div class="md:hidden block py-2"><a href="/pages/photos.html">PHOTOS</a></div>
+            <div class="md:hidden block py-2"><a href="/pages/availability.html">CHECK AVAILABILITY</a></div>
+            <div class="py-2"><a href="/pages/explore.html">EXPLORE THE INN</a></div>
+            <div class="py-2"><a href="/pages/amentites.html">AMENITIES & SERVICES</a></div>
+            <div class="py-2"><a href="/pages/press.html">PRESS & REVIEWS</a></div>
+            <div class="py-2"><a href="/pages/offers.html">OFFERS</a></div>
+            <div class="py-2"><a href="/pages/events.html">EVENTS AT NOBNOCKET</a></div>
+            <div class="py-2"><a href="/pages/blog.html">MARTHA'S VINEYARD BLOG</a></div>
+            <div class="py-2"><a href="/pages/faq.html">FAQS</a></div>
+            <div class="py-2"><a href="/pages/policies.html">POLICIES</a></div>
+            <div class="py-2"><a href="/pages/contact.html">LOCATION & CONTACT</a></div>
+        </div>
+    </div>
+    <!-- Hero Text -->
+    <div class="bg-prime text-center text-white py-3 mt-3">
+        <div class="lg:text-4xl md:text-3xl text-xl font-bold py-3 px-1 md:px-0">EXPLORE THE INN</div>
+        <div class="md:max-w-2xl max-w-xs ml-auto mr-auto py-3">
+            <hr>
+        </div>
+        <div class="text-lg px-5 py-3">Vineyard Haven Bed & Breakfast. The modern Boutique Hotel on Martha’s Vineyard.
+        </div>
+    </div>
+    <!-- Grid Section-1 -->
+    <div class="flex justify-between lg:flex-row flex-col items-center mt-3 ">
+        <!-- Image -->
+        <div class="swiper-container-2 swiper lg:w-1/2 w-full">
+            <div class="swiper-wrapper">
+                <!-- Slider -->
+                <div class="swiper-slide flex justify-between items-center">
+                    <div class="p-1"><img src="/src/assets/images/i1.jpg" alt="" class="h-full w-full object-fill">
+                    </div>
+                </div>
+                <div class="swiper-slide flex justify-between items-center">
+                    <div class="p-1"><img src="/src/assets/images/i2.jpg" alt="" class=" object-fill"></div>
+                </div>
+                <div class="swiper-slide flex justify-between items-center">
+                    <div class="p-1"><img src="/src/assets/images/i3.jpg" alt="" class=" object-fill"></div>
+                </div>
+                <div class="swiper-slide flex justify-between items-center">
+                    <div class="p-1"><img src="/src/assets/images/i4.jpg" alt="" class=" object-fill"></div>
+                </div>
+            </div>
+            <!-- Navigation Button -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- Text -->
+        <div class="bg-blue-400 p-10 text-white lg:w-1/2 w-full">
+            <div class="text-2xl uppercase">LUXURY GRAND / $310-$725</div>
+            <div class="text-lg my-3">
+                These are rooms for those seeking a lavish experience. Luxury Grand rooms offer pure elegance. Bathrooms
+                are large with double vanities, stand-alone soaking tubs and large marble & glass walk-in showers.
+            </div>
+            <div class="text-lg">
+                <ul class="custom-bullet ml-10">
+                    <li>King bed</li>
+                    <li>Nespresso maker</li>
+                    <li>Table and chairs to enjoy an in-room leisurely breakfast</li>
+                    <li>Original brick gas insert fireplace</li>
+                </ul>
+            </div>
+            <div>
+                <button class="text-xl uppercase border border-white px-5 py-2 mt-5 hover:bg-white hover:text-blue-400">
+                    Book now
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Grid Section-2 -->
+    <div class="flex justify-between lg:flex-row flex-col-reverse items-center mt-3 ">
+        <!-- Text -->
+        <div class="bg-orange-400 p-10 text-white lg:w-1/2 w-full">
+            <div class="text-2xl uppercase">LUXURY GRAND / $310-$725</div>
+            <div class="text-lg my-3">
+                These are rooms for those seeking a lavish experience. Luxury Grand rooms offer pure elegance. Bathrooms
+                are large with double vanities, stand-alone soaking tubs and large marble & glass walk-in showers.
+            </div>
+            <div class="text-lg">
+                <ul class="custom-bullet ml-10">
+                    <li>King bed</li>
+                    <li>Nespresso maker</li>
+                    <li>Table and chairs to enjoy an in-room leisurely breakfast</li>
+                    <li>Original brick gas insert fireplace</li>
+                </ul>
+            </div>
+            <div>
+                <button class="text-xl uppercase border border-white px-5 py-2 mt-5 hover:bg-white hover:text-blue-400">
+                    Book now
+                </button>
+            </div>
+        </div>
+        <!-- Image -->
+        <div class="swiper-container-2 swiper lg:w-1/2 w-full">
+            <div class="swiper-wrapper">
+                <!-- Slider -->
+                <div class="swiper-slide flex justify-between items-center">
+                    <div class="p-1"><img src="/src/assets/images/i1.jpg" alt="" class="h-full w-full object-fill">
+                    </div>
+                </div>
+                <div class="swiper-slide flex justify-between items-center">
+                    <div class="p-1"><img src="/src/assets/images/i2.jpg" alt="" class=" object-fill"></div>
+                </div>
+                <div class="swiper-slide flex justify-between items-center">
+                    <div class="p-1"><img src="/src/assets/images/i3.jpg" alt="" class=" object-fill"></div>
+                </div>
+                <div class="swiper-slide flex justify-between items-center">
+                    <div class="p-1"><img src="/src/assets/images/i4.jpg" alt="" class=" object-fill"></div>
+                </div>
+            </div>
+            <!-- Navigation Button -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+    <!-- Grid Section-3 -->
+    <div class="flex justify-between lg:flex-row flex-col items-center mt-3 ">
+        <!-- Image -->
+        <div class="swiper-container-2 swiper lg:w-1/2 w-full">
+            <div class="swiper-wrapper">
+                <!-- Slider -->
+                <div class="swiper-slide flex justify-between items-center">
+                    <div class="p-1"><img src="/src/assets/images/i1.jpg" alt="" class="h-full w-full object-fill">
+                    </div>
+                </div>
+                <div class="swiper-slide flex justify-between items-center">
+                    <div class="p-1"><img src="/src/assets/images/i2.jpg" alt="" class=" object-fill"></div>
+                </div>
+                <div class="swiper-slide flex justify-between items-center">
+                    <div class="p-1"><img src="/src/assets/images/i3.jpg" alt="" class=" object-fill"></div>
+                </div>
+                <div class="swiper-slide flex justify-between items-center">
+                    <div class="p-1"><img src="/src/assets/images/i4.jpg" alt="" class=" object-fill"></div>
+                </div>
+            </div>
+            <!-- Navigation Button -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- Text -->
+        <div class="bg-indigo-400 p-10 text-white lg:w-1/2 w-full">
+            <div class="text-2xl uppercase">LUXURY GRAND / $310-$725</div>
+            <div class="text-lg my-3">
+                These are rooms for those seeking a lavish experience. Luxury Grand rooms offer pure elegance. Bathrooms
+                are large with double vanities, stand-alone soaking tubs and large marble & glass walk-in showers.
+            </div>
+            <div class="text-lg">
+                <ul class="custom-bullet ml-10">
+                    <li>King bed</li>
+                    <li>Nespresso maker</li>
+                    <li>Table and chairs to enjoy an in-room leisurely breakfast</li>
+                    <li>Original brick gas insert fireplace</li>
+                </ul>
+            </div>
+            <div>
+                <button class="text-xl uppercase border border-white px-5 py-2 mt-5 hover:bg-white hover:text-blue-400">
+                    Book now
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Top Footer -->
+    <div class="grid gap-2 md:grid-cols-3 grid-cols-1 mt-3">
+        <!-- Calender -->
+        <div class="flex justify-center items-center  bg-blue-400 p-5">
+            <form class="grid grid-cols-2 gap-2">
+                <div class="mb-4">
+                    <label for="checkin" class="block text-gray-700 font-bold mb-2 text-lg">Check-in</label>
+                    <input type="text" id="datepicker1"
+                        class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="checkout" class="block text-gray-700 font-bold mb-2 text-lg">Check-out</label>
+                    <input type="text" id="datepicker2"
+                        class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="adults" class="block text-gray-700 font-bold mb-2 text-lg">Adults(18+)</label>
+                    <select id="adults" name="adults"
+                        class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="kids" class="block text-gray-700 font-bold mb-2 text-lg">Kids(16+)</label>
+                    <select id="kids" name="kids"
+                        class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="mb-4 col-span-2">
+                    <label for="promocode" class="block text-gray-700 font-bold mb-2 text-lg">Promo Code</label>
+                    <input type="text" id="promocode" name="promocode" placeholder="Promotional Code"
+                        class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300">
+                </div>
+                <div class="col-span-2">
+                    <button type="submit"
+                        class="w-full uppercase text-white px-4 py-2 rounded bg-blue-950 font-bold">Check
+                        Availability</button>
+                </div>
+
+            </form>
+
+        </div>
+        <!-- Offers -->
+        <div class=" bg-orange-500 text-white py-10">
+            <div class="uppercase mt-3 text-2xl font-semibold ml-5">NewsLetter</div>
+            <div class="relative mt-3 mx-5">
+                <input type="text" class="border border-gray-300 rounded lg:w-60 w-full py-2 px-4 pr-10 text-black "
+                    placeholder="Enter your email">
+                <button class="absolute lg:right-40 md:right-5 right-2 top-2/4 transform -translate-y-2/4">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512">
+                        <path fill="#172554"
+                            d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-5">
+                <div class="ml-5 uppercase mt-3 text-2xl font-semibold">Offers</div>
+                <div class="ml-10 ">
+                    <div class="text-lg">
+                        <ul class="custom-bullet">
+                            <li>King bed</li>
+                            <li>Nespresso maker</li>
+                            <li>Table and chairs </li>
+                            <li>Original Fireplace</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- Contact Us -->
+        <div class="flex flex-col justify-center items-center bg-blue-950 text-white py-10">
+            <div class="text-2xl uppercase">Contact Us</div>
+            <div class="">(508) 696-0859</div>
+            <div class=""><a href="#">lux@nobnocket.com</a></div>
+            <div class="flex justify-between mt-3">
+                <div>
+                    <a href="/"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512">
+                            <path fill="#fff"
+                                d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" />
+                        </svg></a>
+                </div>
+                <div class="ml-2">
+                    <a href="/">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512">
+                            <path fill="#fff"
+                                d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z" />
+                        </svg>
+                    </a>
+
+                </div>
+                <div class="ml-2">
+                    <a href="/">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512">
+                            <path fill="#fff"
+                                d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM351.3 199.3v0c0 86.7-66 186.6-186.6 186.6c-37.2 0-71.7-10.8-100.7-29.4c5.3 .6 10.4 .8 15.8 .8c30.7 0 58.9-10.4 81.4-28c-28.8-.6-53-19.5-61.3-45.5c10.1 1.5 19.2 1.5 29.6-1.2c-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3c-9-6-16.4-14.1-21.5-23.6s-7.8-20.2-7.7-31c0-12.2 3.2-23.4 8.9-33.1c32.3 39.8 80.8 65.8 135.2 68.6c-9.3-44.5 24-80.6 64-80.6c18.9 0 35.9 7.9 47.9 20.7c14.8-2.8 29-8.3 41.6-15.8c-4.9 15.2-15.2 28-28.8 36.1c13.2-1.4 26-5.1 37.8-10.2c-8.9 13.1-20.1 24.7-32.9 34c.2 2.8 .2 5.7 .2 8.5z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="max-w-xs mt-5 flex justify-around items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                    <path fill="#fff"
+                        d="M384 192c0 87.4-117 243-168.3 307.2c-12.3 15.3-35.1 15.3-47.4 0C117 435 0 279.4 0 192C0 86 86 0 192 0S384 86 384 192z" />
+                </svg>
+                <span class="ml-3">Nobnocket Boutique Inn, 60 Mount Aldworth Rd, Vineyard Haven MA 02568</span>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <Footer class=" pt-28 mt-2"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('/src/assets/images/i1.jpg'); background-size: cover;">
+        <div class="flex justify-around lg:flex-row flex-col items-center max-w-4xl ml-auto mr-auto">
+            <div class="w-1/2 flex justify-center items-center"><img src="/src/assets/images/logo.png" alt=""
+                    class="w-52"></div>
+            <div class="text-white w-1/2  text-xl text-center lg:mt-0 mt-5 font-serif">Rated the top Martha's Vineyard
+                Bed and Breakfast 2017-2023 by Trip Advisor</div>
+        </div>
+        <div>
+            <ul
+                class="flex justify-around lg:flex-row flex-col items-center text-sm text-white max-w-4xl ml-auto mr-auto mt-5">
+                <a href="/pages/rooms.html" class="hover:text-gray-300 mb-2">ROOMS /</a>
+                <a href="/pages/experience.html" class="hover:text-gray-300 mb-2">EXPERIENCE /</a>
+                <a href="/pages/vineyard.html" class="hover:text-gray-300 mb-2">THE VINEYARD /</a>
+                <a href="/pages/photos.html" class="hover:text-gray-300 mb-2">PHOTOS /</a>
+                <a href="/pages/explore.html" class="hover:text-gray-300 mb-2">THE INN /</a>
+                <a href="/pages/amentites.html" class="hover:text-gray-300 mb-2">AMENITIES /</a>
+                <a href="/pages/offers.html" class="hover:text-gray-300 mb-2">OFFERS /</a>
+                <a href="/pages/blog.html" class="hover:text-gray-300 mb-2">BLOG /</a>
+                <a href="/pages/faq.html" class="hover:text-gray-300 mb-2">FAQS /</a>
+                <a href="/pages/policies.html" class="hover:text-gray-300 mb-2">POLICIES /</a>
+                <a href="/pages/contact.html" class="hover:text-gray-300 mb-2">CONTACT</a>
+            </ul>
+        </div>
+
+        <div class="text-xs text-center text-white mt-10 pb-5">
+            <div class=" flex justify-center items-center mb-3">
+                <span class="ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512">
+                        <path fill="#fff"
+                            d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" />
+                    </svg>
+                </span>
+                <span class="ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512">
+                        <path fill="#fff"
+                            d="M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z" />
+                    </svg>
+                </span>
+                <span class="ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512">
+                        <path fill="#fff"
+                            d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z" />
+                    </svg>
+                </span>
+                <span class="ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512">
+                        <path fill="#fff"
+                            d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM351.3 199.3v0c0 86.7-66 186.6-186.6 186.6c-37.2 0-71.7-10.8-100.7-29.4c5.3 .6 10.4 .8 15.8 .8c30.7 0 58.9-10.4 81.4-28c-28.8-.6-53-19.5-61.3-45.5c10.1 1.5 19.2 1.5 29.6-1.2c-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3c-9-6-16.4-14.1-21.5-23.6s-7.8-20.2-7.7-31c0-12.2 3.2-23.4 8.9-33.1c32.3 39.8 80.8 65.8 135.2 68.6c-9.3-44.5 24-80.6 64-80.6c18.9 0 35.9 7.9 47.9 20.7c14.8-2.8 29-8.3 41.6-15.8c-4.9 15.2-15.2 28-28.8 36.1c13.2-1.4 26-5.1 37.8-10.2c-8.9 13.1-20.1 24.7-32.9 34c.2 2.8 .2 5.7 .2 8.5z" />
+                    </svg>
+                </span>
+            </div>
+            ©
+            <script>document.write(new Date().getFullYear())</script> All Rights Reserved.
+            <a href="https://www.banglapuzzle.com/" class="text-second"></a>
+        </div>
+
+    </Footer>
+
+    <script src="/src/js/index.js"></script>
+</body>
+
+</html>
